@@ -1,0 +1,40 @@
+@use "../../../../vars.scss" as v;
+.secFilters {
+  h4 {
+    font-size: 14px;
+    font-weight: 500;
+    color: v.$DarkColor;
+  }
+  .textActive {
+    color: v.$BackGround;
+  }
+}
+
+.secFilters__slider {
+  margin: 10px 0;
+}
+.textActive {
+  color: v.$BackGround;
+}
+.btnFilter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 10px 0;
+  width: 120px;
+  gap: 10px;
+  border-radius: 5px;
+  background: v.$Secondarycolor;
+  cursor: pointer;
+  &__active {
+    background-color: v.$MainColor;
+  }
+  .IconFilter {
+    font-size: 1rem;
+    color: v.$DarkColor;
+    &__active {
+      color: v.$BackGround;
+    }
+  }
+}

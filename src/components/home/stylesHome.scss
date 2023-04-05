@@ -1,0 +1,48 @@
+@use "../../vars.scss" as v;
+.SecMain {
+  padding: 20px;
+}
+
+.secHeader {
+  figure {
+    display: flex;
+    gap: 10px;
+    img {
+      width: 30px;
+      height: 40px;
+      object-fit: cover;
+    }
+    figcaption {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h4 {
+        color: v.$MainColor;
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+      h3 {
+        font-size: 14px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+  }
+}
+.secSlider {
+  .secSlider__Img {
+    margin: 20px 0;
+    width: 250px;
+    height: 100px;
+    border-radius: 10px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+    }
+  }
+}

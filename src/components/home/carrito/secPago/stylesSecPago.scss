@@ -1,0 +1,201 @@
+@use "../../../../vars.scss" as v;
+.SecPago {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .secHeaderPago {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h3 {
+      font-weight: 400;
+      font-size: 1rem;
+      color: v.$DarkColor;
+    }
+    .iconBack {
+      position: absolute;
+      left: 0;
+      transform: translateX(20px);
+      font-size: 20px;
+      color: v.$DarkColor;
+    }
+  }
+
+  .SeclocationPago {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    h3 {
+      font-weight: 400;
+      font-size: 20px;
+      color: v.$DarkColor;
+    }
+    figure {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      h3 {
+        font-size: 1rem;
+        font-weight: 400;
+        color: v.$DarkColor;
+      }
+      .iconTo {
+        position: absolute;
+        right: 0;
+        transform: translateX(-20px);
+        font-size: 20px;
+        color: v.$DarkColor;
+      }
+    }
+  }
+
+  .SecMetodoPago {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    h3 {
+      font-weight: 400;
+      font-size: 20px;
+      color: v.$DarkColor;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      button {
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        transition: 0.5s;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        &:hover {
+          background-color: v.$MainColor;
+          transition: 0.5s;
+          color: v.$BackGround;
+        }
+      }
+
+      .btn__active {
+        color: v.$BackGround;
+        background-color: v.$MainColor;
+      }
+    }
+  }
+  .secCarPago {
+    margin-top: 10px;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+    figure {
+      width: 100%;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: -7px 5px 15px -13px rgba(65, 65, 65, 1);
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        object-fit: cover;
+        padding: 5px;
+      }
+      figcaption {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .secTextCar {
+          flex-grow: 1;
+          display: flex;
+          font-size: 10px;
+          justify-content: space-between;
+          h3 {
+            font-weight: 400;
+          }
+          .totalText {
+            color: v.$GrayColor;
+          }
+        }
+      }
+    }
+  }
+
+  .secCarPago::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .secCarPago::-webkit-scrollbar-thumb {
+    background-color: v.$MainColor;
+    border-radius: 5px;
+  }
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+  }
+
+  .secEmptyCar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 60px;
+    color: v.$GrayColor;
+    gap: 20px;
+    height: 50vh;
+    h3 {
+      font-weight: 400;
+      font-size: 1rem;
+    }
+  }
+  .secSugerencias {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    h3 {
+      font-weight: 400;
+      font-size: 20px;
+      color: v.$DarkColor;
+    }
+    input {
+      height: 44px;
+      border-radius: 10px;
+      background: transparent;
+      border: 1px solid v.$GrayColor;
+      padding: 0 10px;
+    }
+  }
+
+  .secFactura {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    div {
+      display: flex;
+      justify-content: space-between;
+      h4 {
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+    .separador {
+      width: 100%;
+      height: 0.5px;
+      background-color: v.$DarkColor;
+    }
+
+    .totalText {
+      font-size: 20px;
+    }
+  }
+}

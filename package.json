@@ -1,0 +1,36 @@
+{
+  "name": "sprint4esteban",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@cloudinary/react": "^1.11.1",
+    "@cloudinary/url-gen": "^1.9.2",
+    "@reduxjs/toolkit": "^1.9.3",
+    "cloudinary": "^1.35.0",
+    "firebase": "^9.18.0",
+    "rating-star": "^1.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.5",
+    "react-icons": "^4.8.0",
+    "react-redux": "^8.0.5",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.9.0",
+    "sass": "^1.59.2",
+    "stars-rating": "^1.1.0",
+    "sweetalert2": "^11.7.3",
+    "toastify-js": "^1.12.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "vite": "^4.1.0"
+  }
+}

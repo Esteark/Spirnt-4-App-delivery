@@ -1,0 +1,48 @@
+@use "../../../vars.scss" as v;
+.secMainLoginPhone {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  gap: 30px;
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .phone__sec {
+    .phone-input {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid v.$MainColor;
+      border-radius: 4px;
+      padding: 8px;
+      gap: 5px;
+      .phone__secIcons {
+        .iconPhone {
+          color: v.$GrayColor;
+        }
+      }
+    }
+
+    #phone-prefix {
+      border: none;
+      color: v.$GrayColor;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    #phone-number {
+      flex: 2;
+      border: none;
+      outline: none;
+    }
+  }
+}

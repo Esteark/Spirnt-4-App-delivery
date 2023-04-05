@@ -1,0 +1,34 @@
+@use "../../../vars.scss" as v;
+.actionsCar {
+  display: flex;
+  align-items: center;
+  width: 140px;
+  height: 44px;
+  background: v.$Secondarycolor;
+  border-radius: 10px;
+  justify-content: space-around;
+  p {
+    font-size: 20px;
+    color: v.$DarkColor;
+  }
+  .btnActionCar {
+    color: v.$DarkColor;
+    font-size: 20px;
+    font-weight: 400;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+}
+
+.sizeCarButton {
+  width: 66px;
+  height: 30px;
+  border-radius: 5px;
+  p {
+    font-size: 12px;
+  }
+  .btnActionCar {
+    font-size: 12px;
+  }
+}

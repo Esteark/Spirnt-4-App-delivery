@@ -1,0 +1,251 @@
+@use "../../../../../vars.scss" as v;
+.secDetalleFood {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 80px;
+  &__sec1 {
+    figure {
+      width: 100%;
+      height: 300px;
+      padding: 10px;
+      span {
+        width: 100px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        background-color: v.$DarkColor;
+        border-radius: 10px;
+        color: v.$BackGround;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        transition: 0.5s;
+        &:hover {
+          background-color: v.$Secondarycolor;
+          color: v.$DarkColor;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+  &__sec2 {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .sec2__sec1 {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      h3 {
+        font-weight: 400;
+        font-size: 20px;
+      }
+      div {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: center;
+        font-weight: 300;
+        font-size: 1rem;
+        span {
+          display: flex;
+          gap: 10px;
+        }
+      }
+      p {
+        width: 250px;
+        min-height: 60px;
+        font-weight: 300;
+        font-size: 1rem;
+      }
+    }
+
+    .sec2__sec2 {
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+
+      h3 {
+        font-weight: 300;
+        font-size: 1.1rem;
+        color: v.$GrayColor;
+      }
+      .lblInfoAdicion {
+        font-size: 15px;
+        text-align: justify;
+      }
+    }
+  }
+
+  .secCarrito {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    gap: 10px;
+
+    &__total {
+      width: 60%;
+      background-color: v.$MainColor;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 15px;
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        color: v.$DarkColor;
+      }
+      h3 {
+        font-size: 20px;
+        font-weight: 400;
+        color: v.$DarkColor;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (min-width: 992px) {
+  .secDetalleFood {
+    flex-direction: row;
+  }
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+//Estilos para los checkbox
+.control {
+  font-family: arial;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 5px;
+  padding-top: 3px;
+  cursor: pointer;
+  font-size: 16px;
+
+  p {
+    display: flex;
+    justify-content: space-between;
+    .activeAdition {
+      color: v.$MainColor;
+    }
+  }
+}
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.control_indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #f2f2f2;
+  border: 0px solid #000000;
+  border-radius: 0px;
+}
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+  background: #f2f2f2;
+}
+
+.control input:checked ~ .control_indicator {
+  background: #ffe031;
+}
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+  background: #ffe031;
+}
+.control input:disabled ~ .control_indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.control_indicator:after {
+  box-sizing: unset;
+  content: "";
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control_indicator:after {
+  display: block;
+}
+.control-checkbox .control_indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #414141;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.control-checkbox input:disabled ~ .control_indicator:after {
+  border-color: #7b7b7b;
+}
+.control-checkbox .control_indicator::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-left: -1.3rem;
+  margin-top: -1.3rem;
+  background: #ffe031;
+  border-radius: 3rem;
+  opacity: 0.6;
+  z-index: 99999;
+  transform: scale(0);
+}
+@keyframes s-ripple {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@keyframes s-ripple-dup {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+.control-checkbox input + .control_indicator::before {
+  animation: s-ripple 250ms ease-out;
+}
+.control-checkbox input:checked + .control_indicator::before {
+  animation-name: s-ripple-dup;
+}

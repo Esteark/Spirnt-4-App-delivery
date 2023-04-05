@@ -1,0 +1,68 @@
+@use "../../../vars.scss" as v;
+.secLoginEmail {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 20px;
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: v.$DarkColor;
+  }
+}
+
+.formLoginEmail {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 30px;
+
+  label {
+    color: v.$GrayColor;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid v.$GrayColor;
+    font-size: 1rem;
+    font-weight: 300;
+    color: v.$DarkColor;
+    &:focus {
+      outline: none;
+    }
+    margin-top: 5px;
+  }
+  .password-input {
+    button {
+      .iconShowPass {
+        position: absolute;
+        right: 0;
+        transform: translate(-20px, -40px);
+        font-size: 25px;
+        color: v.$GrayColor;
+      }
+    }
+  }
+
+  .btn-submitEmail {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    transform: translate(-20px, -30px);
+    button {
+      width: 100%;
+      padding: 15px;
+      background: v.$MainColor;
+      border: none;
+      border-radius: 10px;
+      color: v.$DarkColor;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@use "../../../vars.scss" as v;
+
+.SecFooter {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  background-color: v.$BackGround;
+
+  &__nav {
+    width: 324px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .IconFooter {
+    cursor: pointer;
+    color: v.$DarkColor;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+    &:hover {
+      color: v.$MainColor;
+      transition: 0.5s;
+    }
+    &__active {
+      color: v.$MainColor;
+    }
+    .circle {
+      position: fixed;
+      width: 5px;
+      height: 5px;
+      border-radius: 10px;
+      background-color: v.$MainColor;
+      transform: translateY(30px);
+    }
+  }
+}
+
+.hidden {
+  display: none !important;
+}
